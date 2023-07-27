@@ -33,6 +33,20 @@
 		</dependency>
 	</dependencies>
 
+    <distributionManagement>
+        <repository>
+            <id>changl0368</id>
+            <url>https://pkgs.dev.azure.com/changl0368/_packaging/changl0368/maven/v1</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </distributionManagement>
+	
+
 	<build>
 		<plugins>
 			<plugin>
