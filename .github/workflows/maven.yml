@@ -44,6 +44,7 @@ jobs:
   upload:
     runs-on: ubuntu-latest
     needs: build
+    if: github.event_name == 'pull_request'
     steps:
     - name: list files/dir
       run: |
