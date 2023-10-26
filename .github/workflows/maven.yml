@@ -41,6 +41,12 @@ jobs:
 #         MAVEN_USERNAME: ${{ secrets.ARTIFACTS_USERNAME }}
 #         MAVEN_PASSWORD: ${{ secrets.ARTIFACTS_TOKEN }}
 
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+    - name: list files/dir
+      run: |
+        ls -lR
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v3
       with:
