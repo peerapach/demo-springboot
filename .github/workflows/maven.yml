@@ -21,6 +21,14 @@ jobs:
     runs-on: ubuntu-latest
     container: maven:3.9.5-amazoncorretto-17
     steps:
+    - name: Cache
+      uses: actions/cache@v3.3.2
+      with:
+        # A list of files, directories, and wildcard patterns to cache and restore
+        path: .m2/
+        # An explicit key for restoring and saving the cache
+        key: maven
+
     - uses: actions/checkout@v3
 #     - name: Set up JDK 17
 #       uses: actions/setup-java@v3
